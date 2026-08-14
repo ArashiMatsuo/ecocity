@@ -47,3 +47,42 @@ textarea {
   font-weight: 900;
   line-height: 1.16;
 }
+
+.brand-word {
+  letter-spacing: -0.02em;
+}
+
+.photo-panel {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(223, 62, 19, 0.16)),
+    url("/tire-tread-hero.png");
+  background-position: 72% center;
+  background-size: cover;
+}
+
+.service-card {
+  border: 1px solid #e2dad4;
+  background: #faf8f6;
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.service-card:hover {
+  border-color: #df3e13;
+  transform: translateY(-2px);
+}
+
+.service-card-featured {
+  background: #fff0ea;
+  border-color: #df3e13;
+}
+
+.service-card-image {
+  height: 210px;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)),
+    url("/tire-tread-hero.png");
+  background-position: center;
+  background-size: cover;
+}
