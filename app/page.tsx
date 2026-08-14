@@ -86,12 +86,19 @@ export default function Home() {
           <a href="#top" aria-label="日本エコシティ ホーム">
             <img src="/ecocitylogo.png" alt="ECO CITY JAPAN" className="h-9 w-auto sm:h-11" />
           </a>
-          <nav className="hidden items-center gap-8 text-xs font-black uppercase tracking-[0.18em] text-white/72 lg:flex" aria-label="主要ナビゲーション">
-            <a href="#concept">Concept</a>
-            <a href="#service">Service</a>
-            <a href="#strengths">Strengths</a>
-            <a href="#permit">Permit</a>
-            <a href="#contact">Contact</a>
+          <nav className="hidden items-center gap-8 text-white/78 lg:flex" aria-label="主要ナビゲーション">
+            {[
+              ["#concept", "コンセプト", "Concept"],
+              ["#service", "事業内容", "Service"],
+              ["#strengths", "強み", "Strengths"],
+              ["#permit", "許認可・設備", "Permit"],
+              ["#contact", "お問い合わせ", "Contact"],
+            ].map(([href, label, sub]) => (
+              <a key={href} href={href} className="nav-link">
+                <span>{label}</span>
+                <small>{sub}</small>
+              </a>
+            ))}
           </nav>
           <a
             href="#contact"
@@ -208,7 +215,7 @@ export default function Home() {
       <section id="strengths" className="bg-[#120b08] py-24 text-white lg:py-32">
         <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
           <p className="section-kicker text-[#ff875e]">Strengths</p>
-          <h2 className="section-title max-w-3xl text-white">回収から燃料供給まで、信頼を支える運用設計。</h2>
+          <h2 className="section-title section-title-dark max-w-3xl">回収から燃料供給まで、信頼を支える運用設計。</h2>
           <div className="mt-14 divide-y divide-white/12 border-y border-white/12">
             {strengths.map((item, index) => (
               <article key={item.number} className="grid gap-8 py-12 lg:grid-cols-[0.26fr_0.9fr_1.1fr] lg:items-center">
@@ -287,7 +294,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1440px] gap-12 px-5 lg:grid-cols-[1fr_1fr] lg:px-10">
           <div>
             <p className="section-kicker text-[#ff875e]">Company</p>
-            <h2 className="section-title text-white">株式会社日本エコシティ</h2>
+            <h2 className="section-title section-title-dark">株式会社日本エコシティ</h2>
             <p className="mt-8 max-w-2xl leading-8 text-white/70">
               廃タイヤの回収・中間処理、ゴム粉・チップ加工、ボイラー代替燃料（TDF）供給、リユースタイヤ貿易を通じて、資源循環と脱炭素化に貢献します。
             </p>

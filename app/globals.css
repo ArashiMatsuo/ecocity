@@ -48,6 +48,41 @@ textarea {
   line-height: 1.22;
 }
 
+.section-title-dark {
+  color: #ffffff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
+
+.nav-link {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 5.5rem;
+  text-align: center;
+  transition: color 180ms ease;
+}
+
+.nav-link span {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.86rem;
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.nav-link small {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.nav-link:hover span,
+.nav-link:hover small {
+  color: #ff875e;
+}
+
 .brand-word {
   letter-spacing: -0.02em;
 }
