@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   description:
     "廃タイヤの回収・中間処理、ゴム粉・チップ加工、ボイラー代替燃料（TDF）供給、リユースタイヤ貿易を行う株式会社日本エコシティの公式サイトです。",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/ecocitylogo.png",
+    shortcut: "/ecocitylogo.png",
   },
 };
 
