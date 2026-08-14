@@ -114,9 +114,9 @@ export default function Home() {
             <p className="mb-8 text-xs font-black uppercase tracking-[0.28em] text-[#ff875e]">
               Scrap Tire Recycling / TDF Supply
             </p>
-            <h1 className="max-w-4xl text-[clamp(3.2rem,8vw,8.6rem)] font-black leading-[0.98]">
-              廃タイヤに、<br />
-              もう一度<br className="hidden sm:block" />エネルギーを。
+            <h1 className="max-w-3xl text-[clamp(2.55rem,5.7vw,6.2rem)] font-black leading-[1.08]">
+              <span className="block">廃タイヤに、</span>
+              <span className="block">もう一度エネルギーを。</span>
             </h1>
             <p className="mt-8 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
               スクラップタイヤを高品質なゴム粉・チップへ再生し、製紙・セメント会社様のボイラー代替燃料（TDF）として安定供給。回収・中間処理・仕様加工まで、一貫した資源循環を担います。
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="photo-panel min-h-[420px]" aria-hidden="true" />
           <div className="relative z-10 self-center">
             <p className="section-kicker">Concept</p>
-            <h2 className="section-title max-w-4xl">
+            <h2 className="section-title max-w-3xl">
               捨てるしかなかったタイヤを、産業を動かす資源へ。
             </h2>
             <div className="mt-8 grid gap-6 text-base leading-8 text-[#514a47] lg:grid-cols-2">
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div>
               <p className="section-kicker">Service</p>
-              <h2 className="section-title">3つの循環ルートで、廃タイヤの価値を最大化。</h2>
+              <h2 className="section-title max-w-3xl">3つの循環ルートで、廃タイヤの価値を最大化。</h2>
             </div>
             <p className="max-w-md text-sm leading-7 text-[#706864]">
               タイヤの状態・用途・品質条件に応じて、リユース、サーマル、マテリアルの最適な出口を設計します。
@@ -208,14 +208,14 @@ export default function Home() {
       <section id="strengths" className="bg-[#120b08] py-24 text-white lg:py-32">
         <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
           <p className="section-kicker text-[#ff875e]">Strengths</p>
-          <h2 className="section-title text-white">回収から燃料供給まで、信頼を支える運用設計。</h2>
+          <h2 className="section-title max-w-3xl text-white">回収から燃料供給まで、信頼を支える運用設計。</h2>
           <div className="mt-14 divide-y divide-white/12 border-y border-white/12">
             {strengths.map((item, index) => (
               <article key={item.number} className="grid gap-8 py-12 lg:grid-cols-[0.26fr_0.9fr_1.1fr] lg:items-center">
                 <p className="text-6xl font-black text-[#df3e13]">{item.number}</p>
                 <div>
                   <p className="text-xs font-black uppercase tracking-[0.26em] text-white/42">{item.label}</p>
-                  <h3 className="mt-4 max-w-xl text-3xl font-black leading-tight">{item.title}</h3>
+                  <h3 className="mt-4 max-w-xl text-2xl font-black leading-tight lg:text-[1.7rem]">{item.title}</h3>
                 </div>
                 <div className={`${index === 1 ? "lg:pl-10" : ""}`}>
                   <p className="max-w-2xl leading-8 text-white/68">{item.text}</p>
@@ -231,7 +231,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
               <p className="section-kicker">Process</p>
-              <h2 className="section-title">透明な処理フローと、安定した納入体制。</h2>
+              <h2 className="section-title max-w-2xl">透明な処理フローと、安定した納入体制。</h2>
               <p className="mt-8 leading-8 text-[#5c5551]">
                 排出事業者様には回収・処分・マニフェスト管理を、燃料利用企業様には品質条件に合わせたTDF燃料の継続供給を行います。
               </p>
@@ -255,7 +255,7 @@ export default function Home() {
       <section id="permit" className="bg-white py-24 lg:py-32">
         <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
           <p className="section-kicker">Compliance & Facility</p>
-          <h2 className="section-title">許認可と設備スペックを明示し、安心して任せられる状態へ。</h2>
+          <h2 className="section-title max-w-3xl">許認可と設備スペックを明示し、安心して任せられる状態へ。</h2>
           <div className="mt-14 grid gap-10 lg:grid-cols-2">
             <DataTable title="自治体別 許認可情報" head={["自治体", "許可区分", "許可番号"]} rows={permits} />
             <DataTable title="工場設備スペック" head={["設備", "用途"]} rows={equipment} />
@@ -272,7 +272,7 @@ export default function Home() {
           <div className="divide-y divide-[#ded7d2] border-y border-[#ded7d2]">
             {faqs.map(([question, answer]) => (
               <details key={question} className="group py-7">
-                <summary className="cursor-pointer list-none pr-10 text-xl font-black text-[#16110f]">
+                <summary className="cursor-pointer list-none pr-10 text-lg font-black leading-8 text-[#16110f] lg:text-xl">
                   {question}
                   <span className="float-right text-[#df3e13] group-open:rotate-45">+</span>
                 </summary>
@@ -312,7 +312,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1440px] lg:grid-cols-[0.9fr_1.1fr]">
           <div className="bg-[#df3e13] px-5 py-20 text-white lg:px-10 lg:py-24">
             <p className="text-xs font-black uppercase tracking-[0.28em] text-white/70">Contact</p>
-            <h2 className="mt-5 max-w-xl text-[clamp(2.5rem,5vw,5.2rem)] font-black leading-tight">
+            <h2 className="mt-5 max-w-xl text-[clamp(2rem,3.8vw,3.8rem)] font-black leading-[1.18]">
               回収・処分、TDF燃料調達のご相談はこちら。
             </h2>
             <p className="mt-8 max-w-xl leading-8 text-white/82">
@@ -359,7 +359,7 @@ export default function Home() {
 function DataTable({ title, head, rows }: { title: string; head: string[]; rows: string[][] }) {
   return (
     <div>
-      <h3 className="mb-5 text-2xl font-black text-[#16110f]">{title}</h3>
+      <h3 className="mb-5 text-xl font-black text-[#16110f] lg:text-2xl">{title}</h3>
       <div className="overflow-x-auto border border-[#ded7d2]">
         <table className="w-full min-w-[520px] border-collapse bg-white text-left text-sm">
           <thead className="bg-black text-white">

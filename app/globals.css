@@ -41,11 +41,11 @@ textarea {
 
 .section-title {
   margin-top: 0.75rem;
-  max-width: 48rem;
+  max-width: 44rem;
   color: #16110f;
-  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-size: clamp(1.65rem, 3.5vw, 2.85rem);
   font-weight: 900;
-  line-height: 1.16;
+  line-height: 1.22;
 }
 
 .brand-word {
