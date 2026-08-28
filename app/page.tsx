@@ -5,6 +5,28 @@ const stats = [
   { value: "250", unit: "社以上", label: "主要お取引先数" },
 ];
 
+const heroBadges = [
+  "JWNET標準対応",
+  "許認可・処理体制を公開",
+  "PC・LT・TB対応",
+  "関東中心・全国相談可",
+];
+
+const vision = [
+  {
+    title: "「また頼みたい」で、選ばれる会社へ。",
+    text: "価格だけでなく、対応の早さ、報告の分かりやすさ、現場への配慮まで含めて、継続して相談される存在を目指します。",
+  },
+  {
+    title: "この仕事で、若者に希望を。",
+    text: "資源循環を支える現場仕事を、誇りを持って続けられる産業へ。働く人にも選ばれる会社づくりを進めます。",
+  },
+  {
+    title: "「ありがとう」を、積み重ねる会社に。",
+    text: "排出事業者様、燃料利用企業様、地域社会に対して、誠実な処理と安定した供給で信頼を重ねます。",
+  },
+];
+
 const services = [
   {
     number: "01",
@@ -27,33 +49,72 @@ const services = [
   },
 ];
 
+const comparison = [
+  ["処分コスト", "単価だけで判断しやすい", "回収量・頻度・処理条件を見直し、総額で最適化"],
+  ["問い合わせ対応", "都度の確認に時間がかかる", "回収、持込み、燃料供給まで用途別に整理して案内"],
+  ["許認可の開示", "情報が分散しやすい", "自治体別の許認可と設備情報をサイト上で公開"],
+  ["マニフェスト管理", "紙管理中心で手間が残る", "電子マニフェスト JWNET に対応"],
+  ["対応タイヤ種別", "一部品目のみ対応", "PC・LT・TBを中心に、状態や量に応じて相談可能"],
+  ["処理後の出口", "処分で終わりやすい", "リユース、TDF、マテリアルの出口を設計"],
+];
+
+const sizes = [
+  ["ゴム粉", "舗装材・成形材などの原料利用に向けた細粒加工。用途に応じて仕様を確認します。"],
+  ["TDFチップ（標準）", "製紙・セメント会社様などのボイラー代替燃料として扱いやすい標準粒度。"],
+  ["大型チップ", "設備条件や搬送条件に合わせ、粗めの破砕サイズにも個別に対応します。"],
+];
+
+const tireTypes = [
+  ["PC", "Passenger Car", "乗用車用タイヤ。販売店、整備工場、ディーラー様からの排出に対応します。"],
+  ["LT", "Light Truck", "小型トラック・商用車用タイヤ。量や保管状況に合わせて回収条件を調整します。"],
+  ["TB", "Truck & Bus", "トラック・バス用タイヤ。重量やサイズを踏まえ、持込み・回収方法を個別に確認します。"],
+];
+
 const strengths = [
   {
     number: "01",
+    label: "Circularity",
+    title: "廃タイヤを、再び使える資源へつなぐ。",
+    text: "リユース、TDF、マテリアルの複数ルートを組み合わせ、廃棄で終わらせない循環を設計します。",
+  },
+  {
+    number: "02",
     label: "Compliance",
     title: "許認可とマニフェストで、排出責任まで見える化。",
     text: "電子マニフェスト JWNET 対応と自治体許認可の明示で、販売店・工場・整備工場様の不法投棄リスクを抑えます。",
   },
   {
-    number: "02",
-    label: "Specification",
-    title: "高磁力選別と粒度調整で、設備に合う燃料へ。",
-    text: "ワイヤー等の金属線を徹底除去し、ボイラーや搬送設備の条件に合わせたTDF燃料として安定供給します。",
+    number: "03",
+    label: "Stable Supply",
+    title: "燃料利用先へ、継続供給できる体制を整える。",
+    text: "受入から加工、出荷までを一貫管理し、TDF燃料の品質条件と納入タイミングをすり合わせます。",
   },
   {
-    number: "03",
+    number: "04",
     label: "Cost Control",
     title: "回収頻度・量・処理条件を見直し、コストを最適化。",
-    text: "回収から処理、出荷までの流れを一体で設計し、廃棄コスト削減と脱炭素化を同時に進めます。",
+    text: "現場ごとの排出量、保管状況、回収頻度を確認し、無理のない処理計画をご提案します。",
+  },
+  {
+    number: "05",
+    label: "Speed",
+    title: "相談から配車まで、現場に合わせて素早く調整。",
+    text: "出張回収、持込み、定期回収など、現場の制約に合わせた運用方法を組み立てます。",
+  },
+  {
+    number: "06",
+    label: "Specification",
+    title: "高磁力選別と粒度調整で、設備に合う燃料へ。",
+    text: "ワイヤー等の金属線除去と破砕サイズの調整により、ボイラーや搬送設備の条件に合わせます。",
   },
 ];
 
 const flow = [
-  "回収相談",
+  "出張・持込み相談",
   "配車・積込",
   "計量・受入",
-  "破砕加工",
-  "磁力選別",
+  "破砕・磁力選別",
+  "粒度調整・加工",
   "出荷・報告",
 ];
 
@@ -71,7 +132,15 @@ const equipment = [
   ["40tトラックスケール", "受入・出荷時の正確な重量管理"],
 ];
 
+const policies = [
+  ["環境方針", "適正処理、再資源化、脱炭素への貢献を基本方針として、廃タイヤを有効資源として循環させます。"],
+  ["行動指針", "許認可・マニフェスト・受入記録を整理し、排出事業者様が安心して確認できる情報開示を進めます。"],
+  ["認証・優良認定", "取得状況・掲載可否を確認のうえ、正式情報として追記します。"],
+];
+
 const faqs = [
+  ["どの種類のタイヤに対応していますか？", "PC、LT、TBを中心に対応します。建設車両用など特殊サイズは、状態・数量・保管場所を確認したうえで個別にご相談ください。"],
+  ["対応エリアはどこまでですか？", "東京都・埼玉県・千葉県・神奈川県を中心に対応しています。その他エリアも数量や条件によりご相談可能です。"],
   ["少量の廃タイヤでも回収できますか？", "地域、数量、回収頻度により最適な方法をご提案します。まずは保管状況と本数をお知らせください。"],
   ["電子マニフェストに対応していますか？", "JWNETに対応しています。排出事業者様の管理負担を抑え、法令遵守を支援します。"],
   ["TDF燃料の粒度指定は可能ですか？", "可能です。ボイラー設備や搬送条件に合わせて、破砕サイズや金属線除去レベルを調整します。"],
@@ -121,13 +190,21 @@ export default function Home() {
             <p className="mb-8 text-xs font-black uppercase tracking-[0.28em] text-[#ff875e]">
               Scrap Tire Recycling / TDF Supply
             </p>
-            <h1 className="max-w-3xl text-[clamp(2.55rem,5.7vw,6.2rem)] font-black leading-[1.08]">
+            <h1 className="max-w-3xl text-[clamp(2.35rem,5.2vw,5.6rem)] font-black leading-[1.08]">
               <span className="block">廃タイヤに、</span>
-              <span className="block">もう一度エネルギーを。</span>
+              <span className="block">もう一度</span>
+              <span className="block">エネルギーを。</span>
             </h1>
             <p className="mt-8 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
-              スクラップタイヤを高品質なゴム粉・チップへ再生し、製紙・セメント会社様のボイラー代替燃料（TDF）として安定供給。回収・中間処理・仕様加工まで、一貫した資源循環を担います。
+              スクラップタイヤを高品質なゴム粉・チップへ再生し、製紙・セメント会社様のボイラー代替燃料（TDF）として安定供給。PC・LT・TBまで、回収・中間処理・仕様加工を一貫して担います。
             </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              {heroBadges.map((badge) => (
+                <span key={badge} className="border border-white/18 bg-black/35 px-4 py-2 text-xs font-black text-white/82">
+                  {badge}
+                </span>
+              ))}
+            </div>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="#contact" className="rounded-none bg-[#df3e13] px-7 py-4 text-center font-black text-white transition hover:bg-[#f05a24]">
                 回収・処分を相談する
@@ -149,16 +226,21 @@ export default function Home() {
       </section>
 
       <section aria-label="実績数値" className="border-y border-[#e1d8d1] bg-white">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-2 lg:grid-cols-4">
-          {stats.map((item) => (
-            <div key={item.label} className="border-r border-[#e1d8d1] px-5 py-8 lg:px-10">
-              <p className="text-[clamp(2.4rem,5vw,5rem)] font-black leading-none text-[#16110f]">
-                {item.value}
-                <span className="ml-2 text-base text-[#df3e13]">{item.unit}</span>
-              </p>
-              <p className="mt-4 text-xs font-black uppercase tracking-[0.16em] text-[#706864]">{item.label}</p>
-            </div>
-          ))}
+        <div className="mx-auto max-w-[1440px]">
+          <div className="grid grid-cols-2 lg:grid-cols-4">
+            {stats.map((item) => (
+              <div key={item.label} className="border-r border-[#e1d8d1] px-5 py-8 lg:px-10">
+                <p className="text-[clamp(2.4rem,5vw,5rem)] font-black leading-none text-[#16110f]">
+                  {item.value}
+                  <span className="ml-2 text-base text-[#df3e13]">{item.unit}</span>
+                </p>
+                <p className="mt-4 text-xs font-black uppercase tracking-[0.16em] text-[#706864]">{item.label}</p>
+              </div>
+            ))}
+          </div>
+          <p className="border-t border-[#e1d8d1] px-5 py-3 text-xs font-bold text-[#706864] lg:px-10">
+            掲載数値は確認用の例示を含みます。正式公開時に実績値へ差し替えます。
+          </p>
         </div>
       </section>
 
@@ -185,6 +267,51 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-white py-24 lg:py-32">
+        <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
+          <p className="section-kicker">Our Vision</p>
+          <h2 className="section-title max-w-3xl">資源循環を、信頼される仕事として次の世代へ。</h2>
+          <div className="mt-14 grid gap-5 lg:grid-cols-3">
+            {vision.map((item) => (
+              <article key={item.title} className="border border-[#e2dad4] bg-[#faf8f6] p-7">
+                <h3 className="text-xl font-black leading-8 text-[#16110f]">{item.title}</h3>
+                <p className="mt-4 leading-7 text-[#5c5551]">{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
+          <p className="section-kicker">Why Us</p>
+          <h2 className="section-title max-w-3xl">比較しやすい情報開示で、検討の不安を減らします。</h2>
+          <div className="mt-12 overflow-x-auto border border-[#ded7d2] bg-white">
+            <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+              <thead className="bg-black text-white">
+                <tr>
+                  <th className="px-5 py-5 font-black">比較項目</th>
+                  <th className="px-5 py-5 font-black">一般的な処分フロー</th>
+                  <th className="px-5 py-5 font-black">日本エコシティ</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#ebe3de]">
+                {comparison.map((row) => (
+                  <tr key={row[0]} className="align-top">
+                    <td className="px-5 py-5 font-black text-[#16110f]">{row[0]}</td>
+                    <td className="px-5 py-5 leading-7 text-[#706864]">{row[1]}</td>
+                    <td className="px-5 py-5 leading-7 text-[#514a47]">{row[2]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-xs leading-6 text-[#706864]">
+            コスト削減率などの表現は、正式な料金条件・実績確認後に掲載します。
+          </p>
+        </div>
+      </section>
+
       <section id="service" className="bg-white py-24 lg:py-32">
         <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
@@ -208,6 +335,37 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto grid max-w-[1440px] gap-12 px-5 lg:grid-cols-[0.72fr_1.28fr] lg:px-10">
+          <div>
+            <p className="section-kicker">Size & Tire Types</p>
+            <h2 className="section-title max-w-2xl">用途に合わせた加工サイズと、主要タイヤ種別に対応。</h2>
+            <p className="mt-8 leading-8 text-[#5c5551]">
+              燃料利用、原料利用、回収条件に応じて、サイズ・品目・数量を事前に確認します。
+            </p>
+          </div>
+          <div className="grid gap-10">
+            <div className="grid gap-4 sm:grid-cols-3">
+              {sizes.map(([title, text]) => (
+                <article key={title} className="border border-[#ded7d2] bg-white p-6">
+                  <h3 className="text-lg font-black">{title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-[#5c5551]">{text}</p>
+                </article>
+              ))}
+            </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {tireTypes.map(([code, label, text]) => (
+                <article key={code} className="bg-black p-6 text-white">
+                  <p className="text-4xl font-black text-[#df3e13]">{code}</p>
+                  <p className="mt-2 text-xs font-black uppercase tracking-[0.18em] text-white/44">{label}</p>
+                  <p className="mt-5 text-sm leading-7 text-white/74">{text}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -267,6 +425,14 @@ export default function Home() {
             <DataTable title="自治体別 許認可情報" head={["自治体", "許可区分", "許可番号"]} rows={permits} />
             <DataTable title="工場設備スペック" head={["設備", "用途"]} rows={equipment} />
           </div>
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {policies.map(([title, text]) => (
+              <article key={title} className="border border-[#ded7d2] bg-[#faf8f6] p-6">
+                <h3 className="text-lg font-black text-[#16110f]">{title}</h3>
+                <p className="mt-4 text-sm leading-7 text-[#5c5551]">{text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -297,6 +463,9 @@ export default function Home() {
             <h2 className="section-title section-title-dark">株式会社日本エコシティ</h2>
             <p className="mt-8 max-w-2xl leading-8 text-white/70">
               廃タイヤの回収・中間処理、ゴム粉・チップ加工、ボイラー代替燃料（TDF）供給、リユースタイヤ貿易を通じて、資源循環と脱炭素化に貢献します。
+            </p>
+            <p className="mt-6 max-w-2xl leading-8 text-white/62">
+              現場で積み重ねる一つひとつの適正処理が、次の産業を動かす燃料と資源になる。その考えを軸に、透明性のある事業運営を進めます。
             </p>
           </div>
           <dl className="grid gap-0 border-y border-white/12">
